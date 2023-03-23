@@ -1,10 +1,10 @@
 package entities;
 
 public class Calculadora extends Interface {
-	int num;
-	int num2;
+	double num;
+	double num2;
 
-	public int getNum() {
+	public double getNum() {
 		return num;
 	}
 
@@ -12,7 +12,7 @@ public class Calculadora extends Interface {
 		this.num = num;
 	}
 
-	public int getNum2() {
+	public double getNum2() {
 		return num2;
 	}
 
@@ -20,20 +20,30 @@ public class Calculadora extends Interface {
 		this.num2 = num2;
 	}
 
-	public int soma(int num, int num2) {
+	public double soma(double num, double num2) {
 		return num + num2;
 	}
 
-	public int sub(int num, int num2) {
+	public double sub(double num, double num2) {
 		return num - num2;
 	}
 
-	public int div(int num, int num2) {
+	public double div(double num, double num2) {
 		return num / num2;
 	}
 
-	public int multi(int num, int num2) {
+	public double multi(double num, double num2) {
 		return num * num2;
+	}
+
+	public double potencia(int num, int num2) {
+		return Math.pow(num, num2);
+	}
+	public double raiz1(int num) {
+		return Math.sqrt(num);
+	}
+	public double raiz2(int num2) {
+		return Math.sqrt(num2);
 	}
 
 	@Override

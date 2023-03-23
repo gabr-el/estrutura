@@ -16,4 +16,12 @@ public class Interface {
 	public void multi() {
 
 	}
+
+	public void potencia() {
+
+	}
+
+	public void raiz() {
+
+	}
 }

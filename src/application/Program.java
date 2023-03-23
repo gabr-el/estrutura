@@ -16,9 +16,9 @@ public class Program {
 		Calculadora calculadora = new Calculadora();
 
 		System.out.println("Digite um número:");
-		int num = scanner.nextInt();
+		double num = scanner.nextInt();
 		System.out.println("Digite o segundo número:");
-		int num2 = scanner.nextInt();
+		double num2 = scanner.nextInt();
 
 		System.out.println("MENU DE ESCOLHAS");
 		System.out.println("1 - SOMA");
@@ -32,15 +32,11 @@ public class Program {
 
 		case 1:
 
-			calculadora.soma();
-
 			System.out.println(calculadora.soma(num, num2));
 
 			break;
 
 		case 2:
-
-			calculadora.sub();
 
 			System.out.println(calculadora.sub(num, num2));
 
@@ -48,13 +44,11 @@ public class Program {
 
 		case 3:
 
-			calculadora.div();
 			System.out.println(calculadora.div(num, num2));
 
-		break;
+			break;
 		case 4:
 
-			calculadora.multi();
 			System.out.println(calculadora.multi(num, num2));
 			break;
 
@@ -63,7 +57,7 @@ public class Program {
 			System.out.println("Número invalido!");
 			break;
 		}
-
+		scanner.close();
 	}
 
 }
