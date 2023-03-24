@@ -7,86 +7,99 @@ import entities.Calculadora;
 public class Program {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-		int opcao = 0;
 		Scanner scanner = new Scanner(System.in);
 
-		System.out.println("--- MENU DE ESCOLHAS ---");
-		System.out.println("1 - SOMA");
-		System.out.println("2 - SUBTRAÇÃO");
-		System.out.println("3 - DIVISÃO");
-		System.out.println("4 - MULTIPLICAÇÃO");
-		System.out.println("5 - POTENCIAÇAO");
-		System.out.println("6 - RAIZ DO NUMERO 1");
-		System.out.println("7 - RAIZ DO NUMERO 2");
-		System.out.println("8 - LOG DO NÚMERO 1");
-		System.out.println("9 - LOG DO NÚMERO 2");
-		System.out.println("10 - ENCERRAR");
+		String resposta = null;
 
-		opcao = scanner.nextInt();
+		int opcao = -1;
 
-		System.out.println("Digite um número:");
-		double num = scanner.nextDouble();
-		System.out.println("Digite o segundo número:");
-		double num2 = scanner.nextDouble();
+		do {
 
-		Calculadora calculadora = new Calculadora(num, num2);
+			System.out.println("--- MENU DE ESCOLHAS ---");
+			System.out.println("1 - SOMA");
+			System.out.println("2 - SUBTRAÇÃO");
+			System.out.println("3 - DIVISÃO");
+			System.out.println("4 - MULTIPLICAÇÃO");
+			System.out.println("5 - POTENCIAÇAO");
+			System.out.println("6 - RAIZ DO NUMERO 1");
+			System.out.println("7 - RAIZ DO NUMERO 2");
+			System.out.println("8 - LOG DO NÚMERO 1");
+			System.out.println("9 - LOG DO NÚMERO 2");
+			System.out.println("10 - ENCERRAR");
 
-		switch (opcao) {
+			opcao = scanner.nextInt();
 
-		case 1:
-			System.out.println(calculadora.soma());
+			if (opcao < 10 && opcao > 0) {
+				System.out.println("Digite dois números:");
+				double num = scanner.nextDouble();
+				double num2 = scanner.nextDouble();
 
-			break;
+				Calculadora calculadora = new Calculadora(num, num2);
 
-		case 2:
+				switch (opcao) {
 
-			System.out.println(calculadora.sub());
+				case 1:
+					System.out.println(calculadora.soma());
 
-			break;
+					break;
 
-		case 3:
+				case 2:
 
-			System.out.println(calculadora.div());
+					System.out.println(calculadora.sub());
 
-			break;
-		case 4:
+					break;
 
-			System.out.println(calculadora.multi());
-			break;
+				case 3:
 
-		case 5:
+					System.out.println(calculadora.div());
 
-			System.out.println(calculadora.potencia());
-			break;
+					break;
+				case 4:
 
-		case 6:
+					System.out.println(calculadora.multi());
+					break;
 
-			System.out.println(calculadora.raiz1());
-			break;
+				case 5:
 
-		case 7:
+					System.out.println(calculadora.potencia());
+					break;
 
-			System.out.println(calculadora.raiz2());
-			break;
+				case 6:
 
-		case 8:
+					System.out.println(calculadora.raiz1());
+					break;
 
-			System.out.println(calculadora.log1());
-			break;
+				case 7:
 
-		case 9:
+					System.out.println(calculadora.raiz2());
+					break;
 
-			System.out.println(calculadora.log2());
-			break;
+				case 8:
 
-		default:
+					System.out.println(calculadora.log1());
+					break;
 
-			System.out.println("Programa encerrado");
-			break;
-		}
+				case 9:
+
+					System.out.println(calculadora.log2());
+					break;
+
+				}
+
+				System.out.println("Deseja continuar? (S/N)");
+				resposta = scanner.next();
+
+			} else {
+				System.out.println("Programa encerrado!");
+			}
+
+		} while (resposta.equalsIgnoreCase("S"));
+
+		System.out.println("Programa encerrado!");
+
 		scanner.close();
+
 	}
 
 }

@@ -71,7 +71,7 @@ public class Calculadora implements Interface {
 
 	@Override
 	public double log2() {
-		return Math.log(num);
+		return Math.log(num2);
 	}
 
 	@Override
