@@ -1,27 +1,22 @@
 package entities;
 
-public class Interface {
+public interface Interface {
 
-	public void soma() {
-	}
+	public double soma();
 
-	public void sub() {
+	public double sub();
 
-	}
+	public double div();
 
-	public void div() {
+	public double multi();
 
-	}
+	public double potencia();
 
-	public void multi() {
+	public double raiz1();
+	
+	public double raiz2();
 
-	}
-
-	public void potencia() {
-
-	}
-
-	public void raiz() {
-
-	}
+	public double log1();
+	
+	public double log2();
 }

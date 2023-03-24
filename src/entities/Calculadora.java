@@ -1,8 +1,17 @@
 package entities;
 
-public class Calculadora extends Interface {
+public class Calculadora implements Interface {
 	double num;
 	double num2;
+
+	public Calculadora() {
+
+	}
+
+	public Calculadora(double num, double num2) {
+		this.num = num;
+		this.num2 = num2;
+	}
 
 	public double getNum() {
 		return num;
@@ -20,30 +29,49 @@ public class Calculadora extends Interface {
 		this.num2 = num2;
 	}
 
-	public double soma(double num, double num2) {
+	@Override
+	public double soma() {
 		return num + num2;
 	}
 
-	public double sub(double num, double num2) {
+	@Override
+	public double sub() {
 		return num - num2;
 	}
 
-	public double div(double num, double num2) {
+	@Override
+	public double div() {
 		return num / num2;
 	}
 
-	public double multi(double num, double num2) {
+	@Override
+	public double multi() {
 		return num * num2;
 	}
 
-	public double potencia(int num, int num2) {
+	@Override
+	public double potencia() {
 		return Math.pow(num, num2);
 	}
-	public double raiz1(int num) {
+
+	@Override
+	public double raiz1() {
 		return Math.sqrt(num);
 	}
-	public double raiz2(int num2) {
+
+	@Override
+	public double raiz2() {
 		return Math.sqrt(num2);
+	}
+
+	@Override
+	public double log1() {
+		return Math.log(num);
+	}
+
+	@Override
+	public double log2() {
+		return Math.log(num);
 	}
 
 	@Override
